@@ -1,11 +1,11 @@
 {
-  "username": "Vaibhavs10",
-  "role": "wordpress developer",
+  "username": "crazyserver",
+  "role": "wordpress",
   "scores": {
-    "technical": 1,
-    "activity": 100,
+    "technical": 0,
+    "activity": 0,
     "collaboration": 80,
-    "overall": 27
+    "overall": 12
   },
   "recommendation": "NO_HIRE",
   "skills": [
@@ -31,15 +31,13 @@
     }
   ],
   "stats": {
-    "repos": 0,
-    "stars": 11,
-    "recent": 30,
+    "repos": 5,
+    "stars": 1,
+    "recent": 0,
     "languages": [
-      "Jupyter Notebook",
-      "Rust",
-      "Python",
-      "HTML",
-      "CSS"
+      "JavaScript",
+      "Shell",
+      "PHP"
     ]
   }
 }

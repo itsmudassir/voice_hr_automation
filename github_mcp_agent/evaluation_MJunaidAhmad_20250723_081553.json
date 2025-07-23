@@ -1,0 +1,85 @@
+{
+  "candidate_profile": {
+    "username": "MJunaidAhmad",
+    "job_role": "wordpress",
+    "experience_level": "developer",
+    "profile_stats": {
+      "total_repos": 30,
+      "total_stars": 21,
+      "recent_activity": 0
+    },
+    "repositories_analyzed": 8,
+    "total_commits": 0,
+    "languages_used": [],
+    "collaboration_score": 8
+  },
+  "skill_assessments": [
+    {
+      "skill_name": "PHP Development",
+      "repositories": [],
+      "evidence_quality": "NONE",
+      "complexity_score": 0,
+      "specific_examples": []
+    },
+    {
+      "skill_name": "WordPress Core",
+      "repositories": [
+        "Skill Name",
+        "Search Terms",
+        "Code Matches"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Skill Name: - **Search Terms**: wordpress, wp-admin, wp-includes, wp-config",
+        "Search Terms: - **Code Matches**: 0 files"
+      ]
+    },
+    {
+      "skill_name": "MySQL/Database",
+      "repositories": [
+        "Repository Name:",
+        "Code Matches:"
+      ],
+      "evidence_quality": "MEDIUM",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Repository Name:: - **Language:** JavaScript"
+      ]
+    },
+    {
+      "skill_name": "JavaScript/jQuery",
+      "repositories": [
+        "Skill Name",
+        "Search Terms",
+        "Code Matches"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Skill Name: - **Search Terms**: javascript, jquery, ajax, wp-ajax",
+        "Search Terms: - **Code Matches**: 0 files"
+      ]
+    }
+  ],
+  "overall_scores": {
+    "technical": 4,
+    "activity": 0,
+    "collaboration": 8,
+    "overall": 4
+  },
+  "recommendation": "INTERVIEW_RECOMMENDED",
+  "confidence": "MEDIUM",
+  "interview_focus": [
+    "Verify MySQL/Database expertise with practical scenarios",
+    "Assess PHP Development knowledge and learning approach",
+    "Deep dive into WordPress Core architecture decisions",
+    "Problem-solving methodology and debugging approach",
+    "Team collaboration and code review practices"
+  ],
+  "red_flags": [
+    "Very low recent activity (< 2 repos updated in 90 days)",
+    "Low PR merge rate (< 30%)"
+  ],
+  "timestamp": "2025-07-23T08:15:53.543710"
+}

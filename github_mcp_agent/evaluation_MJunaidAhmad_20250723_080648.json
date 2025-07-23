@@ -1,18 +1,21 @@
 {
-  "username": "https://github.com/Vaibhavs10",
-  "role": "wordpress developer",
+  "username": "MJunaidAhmad",
+  "role": "wordpress",
   "scores": {
-    "technical": 1,
-    "activity": 100,
-    "collaboration": 80,
-    "overall": 27
+    "technical": 2,
+    "activity": 0,
+    "collaboration": 20,
+    "overall": 4
   },
   "recommendation": "NO_HIRE",
   "skills": [
     {
       "name": "PHP Development",
       "quality": "NONE",
-      "repos": []
+      "repos": [
+        "PickingApp",
+        "SlackDeleteFiles"
+      ]
     },
     {
       "name": "WordPress Core",
@@ -27,19 +30,21 @@
     {
       "name": "MySQL",
       "quality": "NONE",
-      "repos": []
+      "repos": [
+        "multitenant-migration-cli"
+      ]
     }
   ],
   "stats": {
     "repos": 0,
-    "stars": 11,
-    "recent": 30,
+    "stars": 21,
+    "recent": 0,
     "languages": [
-      "Jupyter Notebook",
-      "Rust",
+      "JavaScript",
       "Python",
-      "HTML",
-      "CSS"
+      "Java",
+      "Jupyter Notebook",
+      "PHP"
     ]
   }
 }

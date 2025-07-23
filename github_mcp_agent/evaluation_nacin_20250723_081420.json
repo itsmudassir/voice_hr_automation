@@ -1,0 +1,103 @@
+{
+  "candidate_profile": {
+    "username": "nacin",
+    "job_role": "wordpress",
+    "experience_level": "developer",
+    "profile_stats": {
+      "total_repos": 4,
+      "total_stars": 14,
+      "recent_activity": 0
+    },
+    "repositories_analyzed": 19,
+    "total_commits": 0,
+    "languages_used": [],
+    "collaboration_score": 10
+  },
+  "skill_assessments": [
+    {
+      "skill_name": "PHP Development",
+      "repositories": [
+        "Total Repositories Analyzed:",
+        "Code Matches:",
+        "Project Complexity:"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Total Repositories Analyzed:: - **Code Matches:** 15 files",
+        "Code Matches:: - **Project Complexity:** The repositories vary in quality, with \"wp-develop\" showing a better struc"
+      ]
+    },
+    {
+      "skill_name": "WordPress Core",
+      "repositories": [
+        "Total Repositories Found:",
+        "Code Matches:",
+        "Overall Assessment:"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Total Repositories Found:: - **Code Matches:** 15 files",
+        "Code Matches:: - **Overall Assessment:** The repositories demonstrate some engagement with WordPress Core, but the "
+      ]
+    },
+    {
+      "skill_name": "MySQL/Database",
+      "repositories": [
+        "Skill",
+        "Search Terms",
+        "Code Matches"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Skill: - **Search Terms**: mysql, database, wpdb, sql, query",
+        "Search Terms: - **Code Matches**: 15 files"
+      ]
+    },
+    {
+      "skill_name": "JavaScript/jQuery",
+      "repositories": [
+        "Skill",
+        "Search Terms",
+        "Code Matches",
+        "Total Repositories",
+        "Total Stars",
+        "Total Forks",
+        "Public Repos",
+        "Private Repos",
+        "Recently Active Repos",
+        "Activity Rate"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 5,
+      "specific_examples": [
+        "Skill: - **Search Terms**: javascript, jquery, ajax, wp-ajax",
+        "Search Terms: - **Code Matches**: 15 files found demonstrating the use of JavaScript/jQuery.",
+        "Total Repositories: - **Total Stars**: 14",
+        "Total Stars: - **Total Forks**: 4",
+        "Total Forks: - **Public Repos**: 4"
+      ]
+    }
+  ],
+  "overall_scores": {
+    "technical": 7,
+    "activity": 0,
+    "collaboration": 10,
+    "overall": 6
+  },
+  "recommendation": "STRONG_HIRE",
+  "confidence": "MEDIUM",
+  "interview_focus": [
+    "Deep dive into PHP Development architecture decisions",
+    "Problem-solving methodology and debugging approach",
+    "Team collaboration and code review practices",
+    "Experience with production issues and incident response"
+  ],
+  "red_flags": [
+    "Very low recent activity (< 2 repos updated in 90 days)",
+    "Low PR merge rate (< 30%)"
+  ],
+  "timestamp": "2025-07-23T08:14:20.688220"
+}
