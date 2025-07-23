@@ -1,0 +1,58 @@
+{
+  "username": "MJunaidAhmad",
+  "role": "WordPress Developer",
+  "evaluation_data": {
+    "role_requirements": "Certainly! Here\u2019s a detailed breakdown for the role of a WordPress Developer:\n\n**LANGUAGES:**  \n- PHP  \n- JavaScript  \n- HTML  \n- CSS  \n- SQL  \n\n**FRAMEWORKS:**  \n- WordPress (Core)  \n- WooCommerce (for eCommerce solutions)  \n- REST API (for custom integrations)  \n- jQuery (for JavaScript enhancements)  \n- Bootstrap (for responsive design)  \n\n**TOOLS:**  \n- MySQL (database management)  \n- Git (version control)  \n- Composer (dependency management)  \n- WP-CLI (command line interface for WordPress)  \n- Local development environments (e.g., Local by Flywheel, XAMPP, MAMP)  \n- Debugging tools (e.g., Query Monitor, Debug Bar)  \n- Page builders (e.g., Elementor, Beaver Builder)  \n- Theme and plugin development tools (e.g., Advanced Custom Fields, Custom Post Type UI)  \n\n**KEYWORDS:**  \n- WordPress development  \n- Custom themes  \n- Custom plugins  \n- Responsive design  \n- SEO optimization  \n- Performance optimization  \n- Security best practices  \n- E-commerce solutions  \n- RESTful APIs  \n- Front-end development  \n- Back-end development  \n- Content Management System (CMS)  \n\nThis list provides a comprehensive overview of the skills and tools relevant to a WordPress Developer.",
+    "profile_stats": {
+      "total_repos": 30,
+      "total_stars": 21,
+      "recent_activity": 0,
+      "languages": {
+        "JavaScript": 4,
+        "Python": 1,
+        "Java": 2,
+        "Jupyter Notebook": 2,
+        "PHP": 7,
+        "HTML": 1,
+        "TypeScript": 2,
+        "CSS": 1
+      },
+      "top_languages": [
+        [
+          "PHP",
+          7
+        ],
+        [
+          "JavaScript",
+          4
+        ],
+        [
+          "Java",
+          2
+        ],
+        [
+          "Jupyter Notebook",
+          2
+        ],
+        [
+          "TypeScript",
+          2
+        ]
+      ],
+      "total_prs": 7,
+      "merged_prs": 0
+    },
+    "skills_assessed": {
+      "web development": {
+        "proficiency": "MODERATE",
+        "repo_count": 2,
+        "repos": [
+          "challenge-git",
+          "gitTest"
+        ],
+        "code_files": 0
+      }
+    }
+  },
+  "timestamp": "20250723_083719"
+}

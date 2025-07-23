@@ -1,0 +1,45 @@
+{
+  "username": "AizazSharif",
+  "role": "wordpress",
+  "scores": {
+    "technical": 1,
+    "activity": 4,
+    "collaboration": 10,
+    "overall": 2
+  },
+  "recommendation": "NO_HIRE",
+  "skills": [
+    {
+      "name": "PHP Development",
+      "quality": "NONE",
+      "repos": []
+    },
+    {
+      "name": "WordPress Core",
+      "quality": "NONE",
+      "repos": []
+    },
+    {
+      "name": "JavaScript/jQuery",
+      "quality": "NONE",
+      "repos": []
+    },
+    {
+      "name": "MySQL",
+      "quality": "NONE",
+      "repos": []
+    }
+  ],
+  "stats": {
+    "repos": 44,
+    "stars": 11,
+    "recent": 2,
+    "languages": [
+      "Jupyter Notebook",
+      "C++",
+      "JavaScript",
+      "Java",
+      "HTML"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "username": "Vaibhavs10",
+  "role": "ml junior",
+  "evaluation_data": {
+    "role_requirements": "For the role of a Machine Learning Junior, here are the relevant technical skills, programming languages, frameworks, and tools:\n\nLANGUAGES: \n- Python\n- R\n- SQL\n\nFRAMEWORKS: \n- TensorFlow\n- PyTorch\n- scikit-learn\n- Keras\n- FastAPI (for deploying models)\n\nTOOLS: \n- Jupyter Notebook\n- Anaconda\n- Git\n- Docker (for containerization)\n- MLflow (for model tracking)\n- Pandas (for data manipulation)\n- NumPy (for numerical computations)\n- Matplotlib/Seaborn (for data visualization)\n\nKEYWORDS: \n- Machine Learning\n- Data Preprocessing\n- Feature Engineering\n- Model Evaluation\n- Supervised Learning\n- Unsupervised Learning\n- Neural Networks\n- Hyperparameter Tuning\n- Cross-Validation\n- Data Science",
+    "profile_stats": {
+      "total_repos": 76,
+      "total_stars": 11899,
+      "recent_activity": 30,
+      "languages": {
+        "Jupyter Notebook": 21,
+        "Rust": 2,
+        "Python": 28,
+        "HTML": 6,
+        "CSS": 1,
+        "JavaScript": 1,
+        "Ruby": 1,
+        "Swift": 2,
+        "TypeScript": 1
+      },
+      "top_languages": [
+        [
+          "Python",
+          28
+        ],
+        [
+          "Jupyter Notebook",
+          21
+        ],
+        [
+          "HTML",
+          6
+        ],
+        [
+          "Rust",
+          2
+        ],
+        [
+          "Swift",
+          2
+        ]
+      ],
+      "total_prs": 50,
+      "merged_prs": 0
+    },
+    "skills_assessed": {
+      "machine learning": {
+        "proficiency": "MODERATE",
+        "repo_count": 0,
+        "repos": [],
+        "code_files": 10
+      }
+    }
+  },
+  "timestamp": "20250723_084044"
+}

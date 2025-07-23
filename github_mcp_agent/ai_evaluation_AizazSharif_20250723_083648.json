@@ -1,0 +1,60 @@
+{
+  "username": "AizazSharif",
+  "role": "ML Engineer",
+  "evaluation_data": {
+    "role_requirements": "Certainly! Here\u2019s a detailed breakdown for the role of an ML Engineer:\n\n**LANGUAGES:**  \n- Python  \n- R  \n- SQL  \n- Java  \n- Scala  \n\n**FRAMEWORKS:**  \n- TensorFlow  \n- PyTorch  \n- Keras  \n- Scikit-learn  \n- XGBoost  \n- LightGBM  \n- Apache Spark MLlib  \n\n**TOOLS:**  \n- Jupyter Notebook  \n- Anaconda  \n- MLflow  \n- DVC (Data Version Control)  \n- Apache Airflow  \n- Git  \n- Docker  \n- Kubernetes  \n- TensorBoard  \n- Prometheus  \n- Grafana  \n\n**KEYWORDS:**  \n- Machine Learning  \n- Deep Learning  \n- Natural Language Processing (NLP)  \n- Computer Vision  \n- Reinforcement Learning  \n- Feature Engineering  \n- Model Deployment  \n- Hyperparameter Tuning  \n- Data Preprocessing  \n- A/B Testing  \n- Model Evaluation  \n- Big Data  \n- Cloud Computing (AWS, GCP, Azure)  \n- Data Pipelines  \n- ETL (Extract, Transform, Load)  \n\nThis list provides a comprehensive overview of the technical skills and tools that an ML Engineer would typically use in their role.",
+    "profile_stats": {
+      "total_repos": 44,
+      "total_stars": 11,
+      "recent_activity": 2,
+      "languages": {
+        "Jupyter Notebook": 5,
+        "C++": 1,
+        "JavaScript": 3,
+        "Java": 10,
+        "HTML": 13,
+        "C": 1,
+        "Smali": 1,
+        "Python": 3,
+        "CSS": 1
+      },
+      "top_languages": [
+        [
+          "HTML",
+          13
+        ],
+        [
+          "Java",
+          10
+        ],
+        [
+          "Jupyter Notebook",
+          5
+        ],
+        [
+          "JavaScript",
+          3
+        ],
+        [
+          "Python",
+          3
+        ]
+      ],
+      "total_prs": 1,
+      "merged_prs": 0
+    },
+    "skills_assessed": {
+      "machine learning": {
+        "proficiency": "MODERATE",
+        "repo_count": 6,
+        "repos": [
+          "P2-Image-Classification-Using-Deep-Learning-CNN",
+          "Brain-Tumor-Segmentation-and-Localization-using-Deep-Learning",
+          "P3-Generate-TV-Scripts-Using-Deep-Learning-LSTM"
+        ],
+        "code_files": 4
+      }
+    }
+  },
+  "timestamp": "20250723_083648"
+}

@@ -1,0 +1,93 @@
+{
+  "candidate_profile": {
+    "username": "AizazSharif",
+    "job_role": "wordpress",
+    "experience_level": "developer",
+    "profile_stats": {
+      "total_repos": 44,
+      "total_stars": 11,
+      "recent_activity": 0
+    },
+    "repositories_analyzed": 12,
+    "total_commits": 0,
+    "languages_used": [],
+    "collaboration_score": 9
+  },
+  "skill_assessments": [
+    {
+      "skill_name": "PHP Development",
+      "repositories": [
+        "Skill Name",
+        "Search Terms",
+        "Code Matches"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Skill Name: - **Search Terms**: php, wordpress, wp-content, functions.php",
+        "Search Terms: - **Code Matches**: 0 files"
+      ]
+    },
+    {
+      "skill_name": "WordPress Core",
+      "repositories": [
+        "Skill Name",
+        "Search Terms",
+        "Code Matches"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Skill Name: - **Search Terms**: wordpress, wp-admin, wp-includes, wp-config",
+        "Search Terms: - **Code Matches**: 0 files"
+      ]
+    },
+    {
+      "skill_name": "MySQL/Database",
+      "repositories": [
+        "Skill Name",
+        "Search Terms",
+        "Code Matches"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Skill Name: - **Search Terms**: mysql, database, wpdb, sql, query",
+        "Search Terms: - **Code Matches**: 0 files"
+      ]
+    },
+    {
+      "skill_name": "JavaScript/jQuery",
+      "repositories": [
+        "Skill",
+        "Search Terms",
+        "Code Matches"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 3,
+      "specific_examples": [
+        "Skill: - **Search Terms**: javascript, jquery, ajax, wp-ajax",
+        "Search Terms: - **Code Matches**: 0 files"
+      ]
+    }
+  ],
+  "overall_scores": {
+    "technical": 6,
+    "activity": 0,
+    "collaboration": 9,
+    "overall": 5
+  },
+  "recommendation": "INTERVIEW_RECOMMENDED",
+  "confidence": "MEDIUM",
+  "interview_focus": [
+    "Deep dive into PHP Development architecture decisions",
+    "Problem-solving methodology and debugging approach",
+    "Team collaboration and code review practices",
+    "Experience with production issues and incident response"
+  ],
+  "red_flags": [
+    "Very low recent activity (< 2 repos updated in 90 days)",
+    "Low PR merge rate (< 30%)"
+  ],
+  "timestamp": "2025-07-23T08:21:20.644345"
+}

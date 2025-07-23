@@ -1,0 +1,60 @@
+{
+  "username": "Vaibhavs10",
+  "role": "ml senior",
+  "evaluation_data": {
+    "role_requirements": "For the role of a Senior Machine Learning Engineer, here are the relevant technical skills, programming languages, frameworks, and tools:\n\nLANGUAGES: \n- Python\n- R\n- SQL\n- Java/Scala (for big data processing)\n\nFRAMEWORKS: \n- TensorFlow\n- PyTorch\n- scikit-learn\n- Keras\n- XGBoost\n- LightGBM\n- Apache Spark (for distributed data processing)\n\nTOOLS: \n- Jupyter Notebook\n- MLflow (for model tracking and management)\n- Docker (for containerization)\n- Kubernetes (for orchestration)\n- Git (for version control)\n- Apache Airflow (for workflow management)\n- TensorBoard (for visualization)\n- Pandas (for data manipulation)\n- NumPy (for numerical computations)\n\nKEYWORDS: \n- Machine Learning\n- Deep Learning\n- Natural Language Processing (NLP)\n- Computer Vision\n- Reinforcement Learning\n- Feature Engineering\n- Model Deployment\n- Hyperparameter Tuning\n- Data Preprocessing\n- A/B Testing\n- Big Data\n- Cloud ML Services (AWS SageMaker, Google AI Platform, Azure ML)",
+    "profile_stats": {
+      "total_repos": 76,
+      "total_stars": 11899,
+      "recent_activity": 30,
+      "languages": {
+        "Jupyter Notebook": 21,
+        "Rust": 2,
+        "Python": 28,
+        "HTML": 6,
+        "CSS": 1,
+        "JavaScript": 1,
+        "Ruby": 1,
+        "Swift": 2,
+        "TypeScript": 1
+      },
+      "top_languages": [
+        [
+          "Python",
+          28
+        ],
+        [
+          "Jupyter Notebook",
+          21
+        ],
+        [
+          "HTML",
+          6
+        ],
+        [
+          "Rust",
+          2
+        ],
+        [
+          "Swift",
+          2
+        ]
+      ],
+      "total_prs": 50,
+      "merged_prs": 0
+    },
+    "skills_assessed": {
+      "machine learning": {
+        "proficiency": "MODERATE",
+        "repo_count": 4,
+        "repos": [
+          "ml-with-timeseries",
+          "stats101",
+          "kaggle-titanic"
+        ],
+        "code_files": 0
+      }
+    }
+  },
+  "timestamp": "20250723_083659"
+}

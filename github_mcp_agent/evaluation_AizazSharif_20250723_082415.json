@@ -1,0 +1,49 @@
+{
+  "username": "AizazSharif",
+  "role": "ml",
+  "scores": {
+    "technical": 1,
+    "activity": 100,
+    "collaboration": 10,
+    "overall": 18
+  },
+  "recommendation": "NO_HIRE",
+  "skills": [
+    {
+      "name": "Frontend",
+      "quality": "NONE",
+      "repos": [
+        "P1-RND-MyRead-A-Book-Tracking-App-Using-React"
+      ]
+    },
+    {
+      "name": "Backend",
+      "quality": "NONE",
+      "repos": []
+    },
+    {
+      "name": "Database",
+      "quality": "NONE",
+      "repos": [
+        "P3-Wrangle-OpenStreetMap-Data-Using-Python-and-MongoDB"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "quality": "NONE",
+      "repos": []
+    }
+  ],
+  "stats": {
+    "repos": 0,
+    "stars": 11,
+    "recent": 2,
+    "languages": [
+      "Jupyter Notebook",
+      "C++",
+      "JavaScript",
+      "Java",
+      "HTML"
+    ]
+  }
+}
