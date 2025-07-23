@@ -1,0 +1,45 @@
+{
+  "username": "Vaibhavs10",
+  "role": "wordpress developer",
+  "scores": {
+    "technical": 1,
+    "activity": 100,
+    "collaboration": 80,
+    "overall": 27
+  },
+  "recommendation": "NO_HIRE",
+  "skills": [
+    {
+      "name": "PHP Development",
+      "quality": "NONE",
+      "repos": []
+    },
+    {
+      "name": "WordPress Core",
+      "quality": "NONE",
+      "repos": []
+    },
+    {
+      "name": "JavaScript/jQuery",
+      "quality": "NONE",
+      "repos": []
+    },
+    {
+      "name": "MySQL",
+      "quality": "NONE",
+      "repos": []
+    }
+  ],
+  "stats": {
+    "repos": 0,
+    "stars": 11,
+    "recent": 30,
+    "languages": [
+      "Jupyter Notebook",
+      "Rust",
+      "Python",
+      "HTML",
+      "CSS"
+    ]
+  }
+}

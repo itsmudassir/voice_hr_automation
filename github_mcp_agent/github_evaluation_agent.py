@@ -829,15 +829,16 @@ async def create_evaluation_agent(username: str, job_role: str, experience_level
     # Create prompt
     prompt = ChatPromptTemplate.from_messages([
         ("system", f"""You are a GitHub profile evaluator for {job_role} candidates.
-        
-Current evaluation context:
-- Username: @{username}
-- Role: {job_role}
-- Experience Level: {experience_level}
-- Skills to evaluate: {', '.join(skills_config['core_skills'])}
+Username: @{username}
+Role: {job_role}
+Experience: {experience_level}
 
-Use the tools to gather comprehensive data about the candidate's GitHub profile.
-Focus on finding evidence of technical skills, collaboration, and recent activity."""),
+Be concise. When analyzing skills, look for:
+1. Repositories using the technology
+2. Code files demonstrating the skill
+3. Project complexity
+
+Return structured data with clear evidence."""),
         ("human", "{input}"),
         MessagesPlaceholder("agent_scratchpad")
     ])
@@ -849,9 +850,9 @@ Focus on finding evidence of technical skills, collaboration, and recent activit
     agent_executor = AgentExecutor(
         agent=agent,
         tools=tools,
-        verbose=False,  # Reduce output verbosity
+        verbose=False,  # Reduce output to prevent crashes
         handle_parsing_errors=True,
-        max_iterations=min(len(skills_config['core_skills']) + 3, 15)  # Limit iterations
+        max_iterations=min(len(skills_config.get('core_skills', [])) + 3, 15)  # Safe access
     )
     
     return agent_executor
@@ -888,28 +889,55 @@ async def evaluate_candidate(username: str, job_role: str, experience_level: str
     print("\n📊 Analyzing Technical Skills...")
     skill_assessments = []
     
-    for skill_name, search_terms in skills_config.get("search_terms", {}).items():
+    # Get skills from the config
+    skills_dict = skills_config.get("skills", {})
+    
+    # Limit skills to prevent timeout
+    skill_items = list(skills_dict.items())[:4]  # Max 4 skills to prevent timeout
+    
+    for skill_name, search_terms in skill_items:
         print(f"   - Evaluating {skill_name}...")
         
-        query = f"analyze repositories for skill '{skill_name}' with search terms: {','.join(search_terms[:5])}"
-        result = await agent.ainvoke({"input": query})
-        
-        skill_data = result.get("output", "")
-        skill_evidence = scoring_engine.analyze_skill_evidence(skill_data)
-        skill_evidence.skill_name = skill_name  # Ensure correct skill name
-        skill_assessments.append(skill_evidence)
+        try:
+            query = f"analyze repositories for skill '{skill_name}' with search terms: {','.join(search_terms[:5])}"
+            result = await agent.ainvoke({"input": query})
+            
+            skill_data = result.get("output", "")
+            skill_evidence = scoring_engine.analyze_skill_evidence(skill_data)
+            skill_evidence.skill_name = skill_name  # Ensure correct skill name
+            skill_assessments.append(skill_evidence)
+        except Exception as e:
+            print(f"     ⚠️ Error: {str(e)[:100]}")
+            # Create empty evidence on error
+            skill_assessments.append(SkillEvidence(
+                skill_name=skill_name,
+                evidence_quality="NONE",
+                repositories=[],
+                code_examples=[],
+                complexity_score=0,
+                years_of_experience=0
+            ))
     
     # Step 2: Get activity metrics
     print("\n📈 Analyzing Activity Patterns...")
-    activity_result = await agent.ainvoke({"input": "get user activity metrics"})
-    activity_data = activity_result.get("output", "")
-    activity_metrics, languages = scoring_engine.parse_activity_metrics(activity_data)
+    try:
+        activity_result = await agent.ainvoke({"input": "get user activity metrics"})
+        activity_data = activity_result.get("output", "")
+        activity_metrics, languages = scoring_engine.parse_activity_metrics(activity_data)
+    except Exception as e:
+        print(f"   ⚠️ Error getting activity metrics: {str(e)[:100]}")
+        activity_metrics = {"total_repos": 0, "recent_repos": 0, "total_stars": 0}
+        languages = []
     
     # Step 3: Get collaboration data
     print("\n🤝 Analyzing Collaboration...")
-    collab_result = await agent.ainvoke({"input": "analyze collaboration patterns"})
-    collab_data = collab_result.get("output", "")
-    collaboration_metrics = scoring_engine.parse_collaboration_data(collab_data)
+    try:
+        collab_result = await agent.ainvoke({"input": "analyze collaboration patterns"})
+        collab_data = collab_result.get("output", "")
+        collaboration_metrics = scoring_engine.parse_collaboration_data(collab_data)
+    except Exception as e:
+        print(f"   ⚠️ Error getting collaboration data: {str(e)[:100]}")
+        collaboration_metrics = {"total_prs": 0, "merged_prs": 0, "issues_created": 0, "collab_score": 0}
     
     # Step 4: Calculate scores
     print("\n🎯 Calculating Scores...")
