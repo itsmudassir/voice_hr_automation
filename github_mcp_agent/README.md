@@ -2,9 +2,17 @@
 
 A powerful GitHub agent that uses MCP (Model Context Protocol), LangChain, and OpenAI to answer questions about GitHub repositories and users.
 
-## 🚀 New: Evaluation Agent for HR Automation
+## 🚀 New: Evaluation Agents for HR Automation
 
-The `github_evaluation_agent.py` provides advanced candidate evaluation:
+### V2 Agent (Recommended) - `github_evaluation_agent_v2.py`
+A simpler, more reliable LLM-aided evaluation agent:
+- **Flexible evaluation** - Works with any role type
+- **Smart analysis** - LLM determines what to search for
+- **Concise output** - Structured recommendations
+- **No crashes** - Handles edge cases gracefully
+
+### V1 Agent - `github_evaluation_agent.py`
+The original evaluation agent provides detailed analysis:
 - **Role-based evaluation** - Backend, Frontend, DevOps, Full Stack, Data roles
 - **Comprehensive scoring** - Technical, activity, and collaboration metrics
 - **Evidence-based analysis** - Links to actual code and contributions
@@ -57,16 +65,29 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 ## Usage
 
-### Evaluation Agent (For HR/Recruiting) 🎯
+### Evaluation Agent V2 (Recommended) 🎯
 
-The evaluation agent is perfect for technical recruiting and candidate assessment:
+The V2 agent is more reliable and flexible:
 
 ```bash
 # Interactive mode
-python github_evaluation_agent.py
+python github_evaluation_agent_v2.py torvalds
 
-# Quick evaluation
-python github_evaluation_agent.py torvalds "evaluate for backend developer role"
+# Direct evaluation with URL
+python github_evaluation_agent_v2.py https://github.com/Vaibhavs10
+
+# Quick evaluation for any role
+python github_evaluation_agent_v2.py torvalds "evaluate for wordpress developer"
+python github_evaluation_agent_v2.py @octocat "evaluate for devops role"
+```
+
+### Evaluation Agent V1 (Original) 📊
+
+The V1 agent provides detailed scoring:
+
+```bash
+# Full evaluation mode
+python github_evaluation_agent.py torvalds "Backend Developer" senior
 
 # Test script
 python test_evaluation_agent.py torvalds
