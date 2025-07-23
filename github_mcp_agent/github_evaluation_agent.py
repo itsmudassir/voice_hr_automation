@@ -153,6 +153,23 @@ class SkillMapper:
                 "Statistics": ["statistics", "probability", "hypothesis", "regression"]
             },
             "weights": {"technical": 0.75, "collaboration": 0.15, "activity": 0.1}
+        },
+        "wordpress": {
+            "core_skills": [
+                "PHP Development", "WordPress Core", "MySQL/Database", "JavaScript/jQuery",
+                "Theme Development", "Plugin Development", "WooCommerce", "REST API"
+            ],
+            "skills": {
+                "PHP Development": ["php", "wordpress", "wp-content", "functions.php"],
+                "WordPress Core": ["wordpress", "wp-admin", "wp-includes", "wp-config"],
+                "MySQL/Database": ["mysql", "database", "wpdb", "sql", "query"],
+                "JavaScript/jQuery": ["javascript", "jquery", "ajax", "wp-ajax"],
+                "Theme Development": ["style.css", "functions.php", "template", "customizer"],
+                "Plugin Development": ["add_action", "add_filter", "hooks", "shortcode"],
+                "WooCommerce": ["woocommerce", "product", "cart", "checkout"],
+                "REST API": ["rest-api", "wp-json", "api", "endpoints"]
+            },
+            "weights": {"technical": 0.7, "collaboration": 0.15, "activity": 0.15}
         }
     }
     
@@ -176,6 +193,8 @@ class SkillMapper:
             return "backend"
         elif any(term in role_lower for term in ["data", "ml", "machine learning", "analytics"]):
             return "data"
+        elif any(term in role_lower for term in ["wordpress", "wp", "cms"]):
+            return "wordpress"
         return "fullstack"
 
 
@@ -830,9 +849,9 @@ Focus on finding evidence of technical skills, collaboration, and recent activit
     agent_executor = AgentExecutor(
         agent=agent,
         tools=tools,
-        verbose=True,
+        verbose=False,  # Reduce output verbosity
         handle_parsing_errors=True,
-        max_iterations=len(skills_config['core_skills']) + 3  # Skills + activity + collab + buffer
+        max_iterations=min(len(skills_config['core_skills']) + 3, 15)  # Limit iterations
     )
     
     return agent_executor
@@ -840,6 +859,20 @@ Focus on finding evidence of technical skills, collaboration, and recent activit
 
 async def evaluate_candidate(username: str, job_role: str, experience_level: str = "mid") -> EvaluationResult:
     """Execute complete candidate evaluation"""
+    
+    # Extract username if URL provided
+    original_username = username
+    username = username.strip()
+    
+    # Handle GitHub URLs
+    if "github.com/" in username:
+        import re
+        match = re.search(r'github\.com/([^/]+)', username)
+        if match:
+            username = match.group(1)
+    
+    # Remove @ if present
+    username = username.lstrip('@')
     
     print(f"\n🔍 Evaluating GitHub Profile: @{username}")
     print(f"   Role: {job_role} ({experience_level})")
@@ -974,8 +1007,10 @@ def save_evaluation(result: EvaluationResult, filename: Optional[str] = None):
     """Save evaluation to JSON file"""
     if not filename:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # Sanitize username for filename (remove special characters)
         username = result.candidate_profile.username
-        filename = f"evaluation_{username}_{timestamp}.json"
+        safe_username = ''.join(c for c in username if c.isalnum() or c in '-_')
+        filename = f"evaluation_{safe_username}_{timestamp}.json"
     
     evaluation_dict = asdict(result)
     
