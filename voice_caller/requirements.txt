@@ -1,0 +1,11 @@
+# Core dependencies
+Flask==2.3.3
+twilio==8.9.0
+python-dotenv==1.0.0
+
+# Production server
+gunicorn==21.2.0
+
+# Additional utilities
+requests==2.31.0
+phonenumbers==8.13.23

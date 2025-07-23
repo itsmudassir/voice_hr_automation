@@ -1,0 +1,19 @@
+# GitHub MCP + LangChain Requirements
+langchain-mcp-adapters>=0.1.9
+mcp
+langgraph
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-core>=0.1.0
+python-dotenv
+
+# MCP transports
+httpx
+aiohttp
+
+# OpenAI
+openai>=1.0.0
+
+# Optional but recommended
+typing-extensions
+pydantic>=2.0

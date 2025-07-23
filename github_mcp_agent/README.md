@@ -1,0 +1,131 @@
+# GitHub MCP Agent
+
+A powerful GitHub agent that uses MCP (Model Context Protocol), LangChain, and OpenAI to answer any question about GitHub repositories, users, and code.
+
+## Features
+
+- 🔍 **Search repositories** - By language, user, stars, topics
+- 👤 **Analyze user profiles** - Language statistics, project analysis
+- 📈 **Find trending repos** - Daily, weekly, monthly trends
+- 📊 **Repository details** - Full information about any repository
+- 💻 **Code search** - Search code across all of GitHub
+- 🤖 **Natural conversation** - Ask questions in natural language
+
+## Setup
+
+### 1. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Environment Variables
+
+Create a `.env` file with:
+
+```env
+GITHUB_PERSONAL_ACCESS_TOKEN=your_github_pat_here
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+### 3. GitHub Token Setup
+
+1. Go to https://github.com/settings/tokens
+2. Create a new token with `repo` scope
+3. Copy the token to your `.env` file
+
+## Usage
+
+### Interactive Mode
+
+```bash
+python github_agent_final.py
+```
+
+Then ask questions like:
+- "Show me torvalds repositories"
+- "What languages does guido van rossum use?"
+- "Find the most popular Python machine learning repos"
+- "Show trending JavaScript projects this week"
+- "Analyze itsmudassir GitHub profile"
+
+### Quick Query Mode
+
+```bash
+# Single query
+python github_agent_final.py "find popular rust projects"
+
+# User analysis
+python github_agent_final.py "analyze torvalds github profile"
+
+# Code search
+python github_agent_final.py "search async code in python"
+
+# Trending repos
+python github_agent_final.py "show trending AI projects this month"
+```
+
+## Available Tools
+
+The agent has access to these GitHub operations:
+
+1. **search_repositories** - Search with GitHub query syntax
+2. **get_user_info** - Get user profile information
+3. **list_user_repositories** - List all repos for a user
+4. **get_repository_details** - Detailed repo information
+5. **analyze_user_languages** - Language usage statistics
+6. **search_code** - Search code across GitHub
+7. **get_trending_repositories** - Find trending projects
+
+## Examples
+
+### Find Popular Projects
+```
+Q: Find the most popular Python web frameworks
+A: Lists Django, Flask, FastAPI with stars, descriptions, and links
+```
+
+### Analyze a User
+```
+Q: What kind of projects does torvalds work on?
+A: Shows Linus Torvalds' repositories, mainly C projects including Linux kernel
+```
+
+### Search Code
+```
+Q: Find examples of async/await in Rust
+A: Returns code snippets and files using async/await in Rust projects
+```
+
+### Trending Analysis
+```
+Q: What are the hottest AI projects this week?
+A: Lists trending AI/ML repositories with descriptions and star counts
+```
+
+## Architecture
+
+- **MCP (Model Context Protocol)** - Direct connection to GitHub's API
+- **LangChain** - Agent framework for tool orchestration
+- **OpenAI GPT-4** - Natural language understanding and response generation
+- **Async Python** - Efficient concurrent API calls
+
+## Troubleshooting
+
+### "Missing environment variables"
+- Ensure `.env` file exists with both tokens
+- Check token validity
+
+### "Connection errors"
+- Verify internet connection
+- Check if GitHub API is accessible
+- Ensure token has correct permissions
+
+### "No results found"
+- Try different search terms
+- Check if user/repo exists
+- Some repos may be private
+
+## License
+
+MIT License - Feel free to use and modify!
