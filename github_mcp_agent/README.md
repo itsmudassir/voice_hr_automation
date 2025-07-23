@@ -1,6 +1,15 @@
 # GitHub MCP Agent
 
-A powerful GitHub agent that uses MCP (Model Context Protocol), LangChain, and OpenAI to answer any question about GitHub repositories, users, and code.
+A powerful GitHub agent that uses MCP (Model Context Protocol), LangChain, and OpenAI to answer questions about GitHub repositories and users.
+
+## 🚀 New: User-Focused Agent
+
+The improved `github_user_focused_agent.py` provides:
+- **User-specific sessions** - Works exclusively with one GitHub user at a time
+- **GPT-4o mini** - Faster and more cost-effective
+- **Smart MCP usage** - Avoids reading large files, uses search efficiently
+- **Session management** - Switch between users easily
+- **Optimized tools** - Focused on insights without wasting tokens
 
 ## Features
 
@@ -36,7 +45,37 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 ## Usage
 
-### Interactive Mode
+### User-Focused Agent (Recommended) 🌟
+
+The new user-focused agent provides a better experience:
+
+```bash
+# Interactive mode - prompts for username
+python github_user_focused_agent.py
+
+# Quick mode with username
+python github_user_focused_agent.py torvalds
+
+# Quick mode with query
+python github_user_focused_agent.py torvalds "show tech stack"
+```
+
+**Features:**
+- Asks for a specific GitHub username first
+- Works only with that user's data (no general searches)
+- Uses GPT-4o mini for efficiency
+- Smart MCP tool usage
+- Session management (switch users with 'switch' command)
+
+**Example queries:**
+- "Show profile and stats"
+- "What's the tech stack?"
+- "Search for web projects"
+- "Show recent activity"
+- "Tell me about linux repo"
+- "Find similar projects to learn from"
+
+### Original Agent (Full GitHub Access)
 
 ```bash
 python github_agent_final.py
@@ -48,22 +87,6 @@ Then ask questions like:
 - "Find the most popular Python machine learning repos"
 - "Show trending JavaScript projects this week"
 - "Analyze itsmudassir GitHub profile"
-
-### Quick Query Mode
-
-```bash
-# Single query
-python github_agent_final.py "find popular rust projects"
-
-# User analysis
-python github_agent_final.py "analyze torvalds github profile"
-
-# Code search
-python github_agent_final.py "search async code in python"
-
-# Trending repos
-python github_agent_final.py "show trending AI projects this month"
-```
 
 ## Available Tools
 
