@@ -2,7 +2,19 @@
 
 A powerful GitHub agent that uses MCP (Model Context Protocol), LangChain, and OpenAI to answer questions about GitHub repositories and users.
 
-## 🚀 New: User-Focused Agent
+## 🚀 New: Evaluation Agent for HR Automation
+
+The `github_evaluation_agent.py` provides advanced candidate evaluation:
+- **Role-based evaluation** - Backend, Frontend, DevOps, Full Stack, Data roles
+- **Comprehensive scoring** - Technical, activity, and collaboration metrics
+- **Evidence-based analysis** - Links to actual code and contributions
+- **Hiring recommendations** - STRONG_HIRE, INTERVIEW_RECOMMENDED, NO_HIRE
+- **Red flag detection** - Identifies potential concerns
+- **Interview focus areas** - Suggests what to explore in interviews
+
+See [EVALUATION_GUIDE.md](EVALUATION_GUIDE.md) for detailed documentation.
+
+## 🌟 User-Focused Agent
 
 The improved `github_user_focused_agent.py` provides:
 - **User-specific sessions** - Works exclusively with one GitHub user at a time
@@ -44,6 +56,28 @@ OPENAI_API_KEY=your_openai_api_key_here
 3. Copy the token to your `.env` file
 
 ## Usage
+
+### Evaluation Agent (For HR/Recruiting) 🎯
+
+The evaluation agent is perfect for technical recruiting and candidate assessment:
+
+```bash
+# Interactive mode
+python github_evaluation_agent.py
+
+# Quick evaluation
+python github_evaluation_agent.py torvalds "evaluate for backend developer role"
+
+# Test script
+python test_evaluation_agent.py torvalds
+```
+
+**Example evaluation queries:**
+- "Evaluate for a DevOps Engineer position"
+- "Assess frontend development skills"
+- "Generate a full hiring report"
+- "What are the red flags for this candidate?"
+- "Show collaboration and teamwork evidence"
 
 ### User-Focused Agent (Recommended) 🌟
 
