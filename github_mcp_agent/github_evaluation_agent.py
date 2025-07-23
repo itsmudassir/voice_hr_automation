@@ -755,6 +755,24 @@ async def create_evaluation_agent(username: str, job_role: str, experience_level
     
     global toolkit, current_user, skills_config
     
+    # Validate and extract username from URL if needed
+    username = username.strip()
+    
+    # Handle GitHub URLs
+    if "github.com/" in username:
+        import re
+        match = re.search(r'github\.com/([^/]+)', username)
+        if match:
+            username = match.group(1)
+    
+    # Remove @ if present
+    username = username.lstrip('@')
+    
+    # Validate username format
+    import re
+    if not re.match(r'^[a-zA-Z0-9](?:[a-zA-Z0-9]|-(?=[a-zA-Z0-9])){0,38}$', username):
+        raise ValueError(f"Invalid GitHub username format: {username}")
+    
     # Set current user
     current_user = username
     
@@ -1000,5 +1018,61 @@ async def main():
             await toolkit.cleanup()
 
 
+async def create_simple_evaluation_agent(username: str):
+    """Simplified wrapper for interactive mode - creates agent for general evaluation"""
+    # Default to Full Stack Developer for general evaluation
+    return await create_evaluation_agent(username, "Full Stack Developer", "mid")
+
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    import sys
+    
+    # Support both original and simplified usage
+    if len(sys.argv) == 2:
+        # Simplified interactive mode with just username
+        username = sys.argv[1]
+        
+        async def interactive_main():
+            """Interactive evaluation mode"""
+            print(f"🔍 GitHub Evaluation Agent")
+            print("=" * 60)
+            
+            try:
+                # Create agent with general evaluation profile
+                agent = await create_simple_evaluation_agent(username)
+                print(f"✅ Agent ready for @{username}")
+                print("\n📌 Example queries:")
+                print("  • 'Evaluate for Backend Developer role'")
+                print("  • 'Assess DevOps skills'")
+                print("  • 'Show technical strengths'")
+                print("  • 'Identify red flags'")
+                print("  • 'Generate hiring recommendation'")
+                print("\nType 'exit' to quit\n")
+                
+                while True:
+                    query = input(f"[{username}] > ").strip()
+                    
+                    if query.lower() in ['exit', 'quit']:
+                        break
+                    
+                    if not query:
+                        continue
+                    
+                    print("\n🤔 Evaluating...\n")
+                    
+                    result = await agent.ainvoke({"input": query})
+                    
+                    print("\n" + "=" * 60)
+                    print(result["output"])
+                    print("=" * 60 + "\n")
+            
+            except Exception as e:
+                print(f"❌ Error: {e}")
+            finally:
+                if toolkit:
+                    await toolkit.cleanup()
+        
+        asyncio.run(interactive_main())
+    else:
+        # Original mode with full parameters
+        asyncio.run(main())

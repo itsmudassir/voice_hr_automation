@@ -13,7 +13,11 @@ async def test_evaluation():
     """Test the evaluation agent with sample queries"""
     
     if len(sys.argv) < 2:
-        print("Usage: python test_evaluation_agent.py <github_username>")
+        print("Usage: python test_evaluation_agent.py <github_username_or_url>")
+        print("\nExamples:")
+        print("  python test_evaluation_agent.py torvalds")
+        print("  python test_evaluation_agent.py @torvalds")
+        print("  python test_evaluation_agent.py https://github.com/torvalds")
         sys.exit(1)
     
     username = sys.argv[1]

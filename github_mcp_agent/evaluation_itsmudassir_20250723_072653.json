@@ -1,0 +1,137 @@
+{
+  "candidate_profile": {
+    "username": "itsmudassir",
+    "job_role": "wordpress",
+    "experience_level": "developer",
+    "profile_stats": {
+      "total_repos": 93,
+      "total_stars": 3,
+      "recent_activity": 0
+    },
+    "repositories_analyzed": 23,
+    "total_commits": 0,
+    "languages_used": [],
+    "collaboration_score": 6
+  },
+  "skill_assessments": [
+    {
+      "skill_name": "Frontend Frameworks",
+      "repositories": [],
+      "evidence_quality": "NONE",
+      "complexity_score": 0,
+      "specific_examples": []
+    },
+    {
+      "skill_name": "Backend Development",
+      "repositories": [
+        "Repository Name:"
+      ],
+      "evidence_quality": "MEDIUM",
+      "complexity_score": 2,
+      "specific_examples": [
+        "Repository Name:: - **Description:** A scraper project."
+      ]
+    },
+    {
+      "skill_name": "Database Management",
+      "repositories": [
+        "redis_appliku"
+      ],
+      "evidence_quality": "MEDIUM",
+      "complexity_score": 2,
+      "specific_examples": [
+        "redis_appliku: - \u2b50 0 (No stars)"
+      ]
+    },
+    {
+      "skill_name": "API Development",
+      "repositories": [],
+      "evidence_quality": "NONE",
+      "complexity_score": 0,
+      "specific_examples": []
+    },
+    {
+      "skill_name": "Testing",
+      "repositories": [
+        "Relevant Repositories Found",
+        "Total Repositories",
+        "Total Stars",
+        "Total Forks",
+        "Public Repos",
+        "Private Repos",
+        "Repos Updated in Last Year",
+        "Repos Updated in Last 90 Days",
+        "Activity Rate",
+        "Pull Request Activity"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 5,
+      "specific_examples": [
+        "Relevant Repositories Found: - **Repository Name**: testing (JavaScript)",
+        "Total Repositories: - **Total Stars**: 0",
+        "Total Stars: - **Total Forks**: 0",
+        "Total Forks: - **Public Repos**: 0",
+        "Public Repos: - **Private Repos**: 0"
+      ]
+    },
+    {
+      "skill_name": "DevOps",
+      "repositories": [],
+      "evidence_quality": "NONE",
+      "complexity_score": 0,
+      "specific_examples": []
+    },
+    {
+      "skill_name": "UI/UX",
+      "repositories": [
+        "Code Matches"
+      ],
+      "evidence_quality": "MEDIUM",
+      "complexity_score": 2,
+      "specific_examples": []
+    },
+    {
+      "skill_name": "Performance",
+      "repositories": [
+        "Total Repositories",
+        "Total Stars",
+        "Total Forks",
+        "Public Repos",
+        "Private Repos",
+        "Repos Updated in Last Year",
+        "Repos Updated in Last 90 Days",
+        "Activity Rate",
+        "Total PRs Created",
+        "Merged PRs"
+      ],
+      "evidence_quality": "HIGH",
+      "complexity_score": 5,
+      "specific_examples": [
+        "Total Repositories: - **Total Stars**: 3",
+        "Total Stars: - **Total Forks**: 8",
+        "Total Forks: - **Public Repos**: 52",
+        "Public Repos: - **Private Repos**: 41",
+        "Private Repos: - **Repos Updated in Last Year**: 14"
+      ]
+    }
+  ],
+  "overall_scores": {
+    "technical": 4,
+    "activity": 0,
+    "collaboration": 6,
+    "overall": 3
+  },
+  "recommendation": "NO_HIRE",
+  "confidence": "MEDIUM",
+  "interview_focus": [
+    "Verify Backend Development expertise with practical scenarios",
+    "Assess Frontend Frameworks knowledge and learning approach",
+    "Deep dive into Testing architecture decisions",
+    "Problem-solving methodology and debugging approach",
+    "Team collaboration and code review practices"
+  ],
+  "red_flags": [
+    "Very low recent activity (< 2 repos updated in 90 days)"
+  ],
+  "timestamp": "2025-07-23T07:26:53.853081"
+}
